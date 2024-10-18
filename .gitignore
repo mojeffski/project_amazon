@@ -1,0 +1,24 @@
+# Ignore virtual environment folder
+venv/
+
+# Ignore dataset folder
+dataset/
+
+# Ignore fine-tuned models folder
+fine_tuned_model/
+
+# Ignore models folder
+models/
+
+# Ignore IPython notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore environment file
+.env
+
+# Ignore macOS .DS_Store files
+.DS_Store
+
+flask_project/
+
+settings.json
