@@ -36,7 +36,7 @@ This open-source project creates a Flask website that displays AI-generated prod
 
     ```bash
     pip install -r requirements.txt
-
+    ```
 3. **Create an .env file in the project root folder and add your Hugging Face token:**
     HUGGINGFACE_API_KEY=your-huggingface-token
 
@@ -44,44 +44,39 @@ This open-source project creates a Flask website that displays AI-generated prod
 
 ```bash
 # Add the following to your .gitignore
-venv/
-flask_project/data/blogposts.db
-__pycache__/
-.env
-datasets/
-fine_tuned_model/
-models/
-*.ipynb_checkpoints
-
+- venv/
+- flask_project/data/blogposts.db
+- __pycache__/
+- .env
+- datasets/
+- fine_tuned_model/
+- models/
+- *.ipynb_checkpoints
+```
 
 ### How to Run
-Run the main script:
-bash
-Code kopieren
-python main.py
+
+5. **Run the main script:**
+    ```bash
+    python main.py
+    ```
 This will execute three Jupyter notebooks consecutively:
 
-1_sentiment_classifier.ipynb:
-Outputs cleaned_with_sentiment_numeric.csv, which contains a new column sentiment with model-generated sentiments.
-Saves evaluation metrics in blogposts.db for the methods.html page.
-2_topic_clustering.ipynb:
-Uses LDA to create topics for the product categories.
-Outputs amazon_review_categories.csv in dataset/interim and lda_visualization.html in the templates folder for visualization in the Flask app.
-3_genai_blogposts.ipynb:
-Generates blog posts based on product names and their corresponding summaries.
-Saves the results in the blogposts table inside blogposts.db.
-Run the Flask app:
-Navigate to the flask_project folder:
+1. **1_sentiment_classifier.ipynb:**
+- Outputs cleaned_with_sentiment_numeric.csv, which contains a new column sentiment with model-generated sentiments. Saves evaluation metrics in blogposts.db for the methods.html page.
+2. **2_topic_clustering.ipynb:**
+- Uses LDA to create topics for the product categories. Outputs amazon_review_categories.csv in dataset/interim and lda_visualization.html in the templates folder for visualization in the Flask app.
+3. **3_genai_blogposts.ipynb:**
+- Generates blog posts based on product names and their corresponding summaries. Saves the results in the blogposts table inside blogposts.db.
 
-bash
-Code kopieren
+### Run the Flask app:
+Navigate to the flask_project folder and run the Flask development server::
+
+```bash
 cd flask_project
-Run the Flask development server:
-
-bash
-Code kopieren
 python app.py
-This will launch the Flask web app on http://127.0.0.1:5000/.
+```
+# This will launch the Flask web app on http://127.0.0.1:5000/.
 
 Project Structure
 bash
@@ -100,13 +95,14 @@ Code kopieren
 ├── 2_topic_clustering.ipynb
 ├── 3_genai_blogposts.ipynb
 └── main.py              # Script to run all notebooks
-Contributing
-Feel free to open issues, submit pull requests, and contribute to this open-source project. Please follow the contribution guidelines.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+### Contributing
+- Feel free to open issues, submit pull requests, and contribute to this open-source project. Please follow the contribution guidelines.
 
-Acknowledgments
-Hugging Face for the pre-trained models
-Gensim for topic modeling tools
-Flask for the web framework
+### License
+- This project is licensed under the MIT License - see the LICENSE file for details.
+
+### Acknowledgments
+- Hugging Face for the pre-trained models
+- Gensim for topic modeling tools
+- Flask for the web framework
