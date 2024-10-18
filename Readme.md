@@ -32,15 +32,15 @@ This open-source project creates a Flask website that displays AI-generated prod
    git clone https://github.com/yourusername/your-repository-name.git
    cd your-repository-name
 
-## Install the required dependencies
+2. **Install the required dependencies**
 
     ```bash
     pip install -r requirements.txt
 
-1. *Create an .env file in the project root folder and add your Hugging Face token:**
+3. **Create an .env file in the project root folder and add your Hugging Face token:**
     HUGGINGFACE_API_KEY=your-huggingface-token
 
-## Create a .gitignore file to prevent certain files from being committed (recommended):
+4. **Create a .gitignore file to prevent certain files from being committed (recommended):**
 
 ```bash
 # Add the following to your .gitignore
@@ -52,3 +52,61 @@ datasets/
 fine_tuned_model/
 models/
 *.ipynb_checkpoints
+
+
+### How to Run
+Run the main script:
+bash
+Code kopieren
+python main.py
+This will execute three Jupyter notebooks consecutively:
+
+1_sentiment_classifier.ipynb:
+Outputs cleaned_with_sentiment_numeric.csv, which contains a new column sentiment with model-generated sentiments.
+Saves evaluation metrics in blogposts.db for the methods.html page.
+2_topic_clustering.ipynb:
+Uses LDA to create topics for the product categories.
+Outputs amazon_review_categories.csv in dataset/interim and lda_visualization.html in the templates folder for visualization in the Flask app.
+3_genai_blogposts.ipynb:
+Generates blog posts based on product names and their corresponding summaries.
+Saves the results in the blogposts table inside blogposts.db.
+Run the Flask app:
+Navigate to the flask_project folder:
+
+bash
+Code kopieren
+cd flask_project
+Run the Flask development server:
+
+bash
+Code kopieren
+python app.py
+This will launch the Flask web app on http://127.0.0.1:5000/.
+
+Project Structure
+bash
+Code kopieren
+├── datasets/
+│   ├── interim/         # Holds intermediate datasets such as 'amazon_review_categories.csv'
+│   └── raw/             # Raw datasets
+├── flask_project/
+│   ├── data/            # SQLite database for blog posts
+│   ├── static/          # Static assets (CSS, JS, images)
+│   ├── templates/       # HTML templates for Flask app
+│   └── app.py           # Flask application file
+├── models/              # Fine-tuned models for sentiment analysis
+├── fine_tuned_model/    # Fine-tuned model weights
+├── 1_sentiment_classifier.ipynb
+├── 2_topic_clustering.ipynb
+├── 3_genai_blogposts.ipynb
+└── main.py              # Script to run all notebooks
+Contributing
+Feel free to open issues, submit pull requests, and contribute to this open-source project. Please follow the contribution guidelines.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Acknowledgments
+Hugging Face for the pre-trained models
+Gensim for topic modeling tools
+Flask for the web framework
