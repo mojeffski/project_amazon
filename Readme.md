@@ -83,21 +83,20 @@ python app.py
 
 ### Project Structure
     ```bash
-
-├── datasets/
-│   ├── interim/         # Holds intermediate datasets such as 'amazon_review_categories.csv'
-│   └── raw/             # Raw datasets
-├── flask_project/
-│   ├── data/            # SQLite database for blog posts
-│   ├── static/          # Static assets (CSS, JS, images)
-│   ├── templates/       # HTML templates for Flask app
-│   └── app.py           # Flask application file
-├── models/              # Fine-tuned models for sentiment analysis
-├── fine_tuned_model/    # Fine-tuned model weights
-├── 1_sentiment_classifier.ipynb
-├── 2_topic_clustering.ipynb
-├── 3_genai_blogposts.ipynb
-└── main.py              # Script to run all notebooks
+        ├── datasets/
+        │   ├── interim/         # Holds intermediate datasets such as 'amazon_review_categories.csv'
+        │   └── raw/             # Raw datasets
+        ├── flask_project/
+        │   ├── data/            # SQLite database for blog posts
+        │   ├── static/          # Static assets (CSS, JS, images)
+        │   ├── templates/       # HTML templates for Flask app
+        │   └── app.py           # Flask application file
+        ├── models/              # Fine-tuned models for sentiment analysis
+        ├── fine_tuned_model/    # Fine-tuned model weights
+        ├── 1_sentiment_classifier.ipynb
+        ├── 2_topic_clustering.ipynb
+        ├── 3_genai_blogposts.ipynb
+        └── main.py              # Script to run all notebooks
     ```
 ### Contributing
 - Feel free to open issues, submit pull requests, and contribute to this open-source project. Please follow the contribution guidelines.
