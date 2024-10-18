@@ -76,11 +76,14 @@ Navigate to the flask_project folder and run the Flask development server::
 cd flask_project
 python app.py
 ```
-# This will launch the Flask web app on http://127.0.0.1:5000/.
+- This will launch the Flask web app on 
+    ```bash
+    http://127.0.0.1:5000/.
+    ```
 
-Project Structure
-bash
-Code kopieren
+### Project Structure
+    ```bash
+
 ├── datasets/
 │   ├── interim/         # Holds intermediate datasets such as 'amazon_review_categories.csv'
 │   └── raw/             # Raw datasets
@@ -95,7 +98,7 @@ Code kopieren
 ├── 2_topic_clustering.ipynb
 ├── 3_genai_blogposts.ipynb
 └── main.py              # Script to run all notebooks
-
+    ```
 ### Contributing
 - Feel free to open issues, submit pull requests, and contribute to this open-source project. Please follow the contribution guidelines.
 
