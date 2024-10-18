@@ -34,8 +34,8 @@ This open-source project creates a Flask website that displays AI-generated prod
 
 ## Install the required dependencies
 
-```bash
-pip install -r requirements.txt
+    ```bash
+    pip install -r requirements.txt
 
 1. *Create an .env file in the project root folder and add your Hugging Face token:**
     HUGGINGFACE_API_KEY=your-huggingface-token
